@@ -39,5 +39,5 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          echo cred :${{env.CREDS}}"
+          echo cred :${{env.CREDS}}
 
