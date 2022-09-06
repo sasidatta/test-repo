@@ -9,11 +9,13 @@ on:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
-env:
-API_KEY: 12345679
+
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+
+env:
+  API_KEY: 12345679
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
