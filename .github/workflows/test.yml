@@ -16,7 +16,7 @@ on:
 
 env:
   API_KEY: 12345679
-  CREDS: ${{secrets.password}}"
+  CREDS: ${{secrets.password}}
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -39,5 +39,5 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          echo password :${{env.CREDS}}"
+          echo cred :${{env.CREDS}}"
 
