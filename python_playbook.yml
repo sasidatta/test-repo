@@ -1,0 +1,21 @@
+- name: python install
+  hosts: aws
+  become: true
+  tasks:
+   - name: install dependent package
+     apt: 
+        name: software-properties-common
+        state: present
+
+   - name: add ppa repo
+     apt_repository:
+        repo: ppa:deadsnakes/ppa
+
+   - name: install python3 and relative packages
+     apt: 
+        name: "{{ item }}"
+        update_cache: true
+        state: present
+     with_items:
+      - python3.10
+      - python3-pip
